@@ -15,3 +15,7 @@ header {
 header > img {
     height: 32px;
 }
+
+body {
+    background-color: rgba(6, 23, 30, 1);
+}
