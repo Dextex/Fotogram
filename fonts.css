@@ -33,6 +33,9 @@
 
 * {
     color: white;
+    font-family: "Figtree";
+    font-size: 14px;
+    color: rgba(153, 172, 179, 1);
 }
 
 h1 {
@@ -40,4 +43,7 @@ h1 {
     font-weight: 800;
     font-size: 40px;
     text-align: center;
+}
+
+footer > p {
 }
