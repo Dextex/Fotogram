@@ -1,0 +1,9 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: rgba(9, 33, 42, 1);
+}
