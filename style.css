@@ -44,3 +44,16 @@ footer {
 main {
     margin-top: 24px;
 }
+
+.thumbmail {
+    width: 150px;
+    height: 150px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 16px;
+    row-gap: 16px;
+    padding: 16px;
+}
