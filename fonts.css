@@ -43,7 +43,7 @@ h1 {
     text-align: center;
 }
 
-footer > p {
+.footer_wrapper > p {
     font-size: 14px;
     color: rgba(153, 172, 179, 1);
 }
