@@ -97,3 +97,12 @@ dialog {
     background: transparent;
     cursor: pointer;
 }
+
+.big_image_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.big_image_wrapper > img {
+    width: 100%;
+}
