@@ -47,7 +47,8 @@ main {
 
 .gallery {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(auto-fit, 150px);
+    justify-content: center;
     column-gap: 16px;
     row-gap: 16px;
     padding: 16px;
@@ -61,4 +62,15 @@ main {
 }
 .thumbmail:hover {
     border-color: rgba(107, 193, 225, 1);
+}
+
+dialog {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    border: 0px;
+    padding: 32px 16px;
+    border-radius: 40px;
+    background-color: rgba(9, 33, 42, 1);
 }

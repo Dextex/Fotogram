@@ -1,4 +1,4 @@
-const images = [
+const IMAGES = [
     "alaska.jpg",
     "anime.jpg",
     "atmosphere.png",
@@ -13,7 +13,7 @@ const images = [
     "winter.jpg",
 ];
 
-const imagesAltText = [
+const IMAGES_ALT_TEXT = [
     "Ein Bild von einer Landschaft in Alaska",
     "Ein Bild von einem Anime",
     "Ein Bild von einer beeindruckenden Atmosphere",
@@ -28,14 +28,19 @@ const imagesAltText = [
     "Ein Bild von einem zugeschneiten Baum",
 ];
 
+function openImageDialog() {
+    const IMAGE_DIALOG_REF = document.getElementById("imageDialog");
+    IMAGE_DIALOG_REF.showModal();
+}
+
 function getImageHtml(index) {
-    let path = "./assets/img/" + images[index];
-    return `<img class='thumbmail' src=${path} alt=${imagesAltText[index]}/>`;
+    let path = "./assets/img/" + IMAGES[index];
+    return `<img onclick='openImageDialog()' class='thumbmail' src=${path} alt=${IMAGES_ALT_TEXT[index]}/>`;
 }
 
 function render() {
     let galleryRef = document.getElementById("gallery");
-    for (let i = 0; i < images.length; i++) {
+    for (let i = 0; i < IMAGES.length; i++) {
         galleryRef.innerHTML += getImageHtml(i);
     }
 }
