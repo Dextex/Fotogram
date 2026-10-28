@@ -31,7 +31,10 @@ const IMAGES_ALT_TEXT = [
 function openImageDialog(path) {
     const IMAGE_DIALOG_REF = document.getElementById("imageDialog");
     const IMAGE_REF = document.getElementById("dialogBigImage");
+    const DIALOG_H2_REF = document.getElementById("imageTitle");
 
+    let title = getFileNameFromPath(path);
+    DIALOG_H2_REF.innerHTML = title;
     IMAGE_REF.src = path;
     IMAGE_DIALOG_REF.showModal();
 }
@@ -39,6 +42,12 @@ function openImageDialog(path) {
 function closeDialog() {
     const IMAGE_DIALOG_REF = document.getElementById("imageDialog");
     IMAGE_DIALOG_REF.close();
+}
+
+function getFileNameFromPath(path) {
+    let result = path.split("/");
+    result = result[result.length - 1];
+    return result;
 }
 
 function getImageHtml(index) {
