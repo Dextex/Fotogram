@@ -28,16 +28,37 @@ const IMAGES_ALT_TEXT = [
     "Ein Bild von einem zugeschneiten Baum",
 ];
 let imageIndex = 0;
+let IMAGE_DIALOG_REF = document.getElementById("imageDialog");
+let IMAGE_REF = document.getElementById("dialogBigImage");
+let DIALOG_H2_REF = document.getElementById("imageTitle");
+let CURRENT_Max_REF = document.getElementById("currentMaxImage");
+
 function openImageDialog(path) {
-    const IMAGE_DIALOG_REF = document.getElementById("imageDialog");
-    const IMAGE_REF = document.getElementById("dialogBigImage");
-    const DIALOG_H2_REF = document.getElementById("imageTitle");
-    const CURRENT_Max_REF = document.getElementById("currentMaxImage");
-    let title = getFileNameFromPath(path);
-    DIALOG_H2_REF.innerHTML = title;
-    CURRENT_Max_REF.innerHTML = imageIndex + "/" + IMAGES.length;
-    IMAGE_REF.src = path;
+    IMAGE_DIALOG_REF = document.getElementById("imageDialog");
+    IMAGE_REF = document.getElementById("dialogBigImage");
+    DIALOG_H2_REF = document.getElementById("imageTitle");
+    CURRENT_Max_REF = document.getElementById("currentMaxImage");
+
+    imageIndex = IMAGES.indexOf(getFileNameFromPath(path));
+
+    setImg(imageIndex);
     IMAGE_DIALOG_REF.showModal();
+}
+
+function setImg(index) {
+    let path = "./assets/img/" + IMAGES[index];
+    let title = getFileNameFromPath(path);
+    CURRENT_Max_REF.innerHTML = imageIndex + 1 + "/" + IMAGES.length;
+    DIALOG_H2_REF.innerHTML = title;
+    IMAGE_REF.src = path;
+}
+
+function nextImg() {
+    imageIndex++;
+    if (imageIndex > IMAGES.length - 1) {
+        imageIndex = 0;
+    }
+    setImg(imageIndex);
 }
 
 function closeDialog() {
@@ -52,7 +73,6 @@ function getFileNameFromPath(path) {
 }
 
 function getImageHtml(index) {
-    imageIndex = index;
     let path = "./assets/img/" + IMAGES[index];
     return `<img onclick='openImageDialog("${path}")' class='thumbmail' src=${path} alt=${IMAGES_ALT_TEXT[index]}/>`;
 }
