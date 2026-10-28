@@ -45,8 +45,8 @@ main {
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 150px);
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     column-gap: 16px;
     row-gap: 16px;
