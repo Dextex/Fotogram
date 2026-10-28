@@ -28,14 +28,17 @@ const IMAGES_ALT_TEXT = [
     "Ein Bild von einem zugeschneiten Baum",
 ];
 
-function openImageDialog() {
+function openImageDialog(path) {
     const IMAGE_DIALOG_REF = document.getElementById("imageDialog");
+    const IMAGE_REF = document.getElementById("dialogBigImage");
+
+    IMAGE_REF.src = path;
     IMAGE_DIALOG_REF.showModal();
 }
 
 function getImageHtml(index) {
     let path = "./assets/img/" + IMAGES[index];
-    return `<img onclick='openImageDialog()' class='thumbmail' src=${path} alt=${IMAGES_ALT_TEXT[index]}/>`;
+    return `<img onclick='openImageDialog("${path}")' class='thumbmail' src=${path} alt=${IMAGES_ALT_TEXT[index]}/>`;
 }
 
 function render() {
