@@ -36,6 +36,11 @@ function openImageDialog(path) {
     IMAGE_DIALOG_REF.showModal();
 }
 
+function closeDialog() {
+    const IMAGE_DIALOG_REF = document.getElementById("imageDialog");
+    IMAGE_DIALOG_REF.close();
+}
+
 function getImageHtml(index) {
     let path = "./assets/img/" + IMAGES[index];
     return `<img onclick='openImageDialog("${path}")' class='thumbmail' src=${path} alt=${IMAGES_ALT_TEXT[index]}/>`;
