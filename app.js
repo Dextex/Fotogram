@@ -60,6 +60,13 @@ function nextImg() {
     }
     setImg(imageIndex);
 }
+function previousImg() {
+    imageIndex--;
+    if (imageIndex < 0) {
+        imageIndex = IMAGES.length - 1;
+    }
+    setImg(imageIndex);
+}
 
 function closeDialog() {
     const IMAGE_DIALOG_REF = document.getElementById("imageDialog");

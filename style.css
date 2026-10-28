@@ -80,6 +80,9 @@ dialog {
 dialog:not([open]) {
     display: none;
 }
+dialog::backdrop {
+    background-color: rgba(9, 33, 42, 0.9);
+}
 .dialog_header {
     display: flex;
     flex-direction: column;
