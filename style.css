@@ -19,7 +19,7 @@ body > header > img {
     height: 32px;
 }
 
-footer {
+body > footer {
     background-image: url("./assets/img/Subtract.png");
     background-repeat: no-repeat;
     background-position: bottom;
@@ -107,4 +107,29 @@ dialog:not([open]) {
 }
 .big_image_wrapper > img {
     width: 100%;
+}
+.dialog_footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.dialog_arrow_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 0px;
+    padding: 0px;
+    background-color: rgba(253, 91, 79, 0.1);
+}
+
+.rotate180 {
+    rotate: 180deg;
+}
+
+.dialog_arrow_button:hover {
+    background-color: rgba(253, 91, 79, 0.2);
 }
