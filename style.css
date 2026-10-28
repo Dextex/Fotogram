@@ -65,12 +65,23 @@ main {
 }
 
 dialog {
+    position: fixed;
+    width: min(90%, 690px);
+    margin: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 48px;
-
     border: 0px;
     padding: 32px 16px;
     border-radius: 40px;
     background-color: rgba(9, 33, 42, 1);
+}
+
+.closeButton {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
 }
