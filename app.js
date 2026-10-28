@@ -27,14 +27,15 @@ const IMAGES_ALT_TEXT = [
     "Ein Bild von einem Vogel",
     "Ein Bild von einem zugeschneiten Baum",
 ];
-
+let imageIndex = 0;
 function openImageDialog(path) {
     const IMAGE_DIALOG_REF = document.getElementById("imageDialog");
     const IMAGE_REF = document.getElementById("dialogBigImage");
     const DIALOG_H2_REF = document.getElementById("imageTitle");
-
+    const CURRENT_Max_REF = document.getElementById("currentMaxImage");
     let title = getFileNameFromPath(path);
     DIALOG_H2_REF.innerHTML = title;
+    CURRENT_Max_REF.innerHTML = imageIndex + "/" + IMAGES.length;
     IMAGE_REF.src = path;
     IMAGE_DIALOG_REF.showModal();
 }
@@ -51,6 +52,7 @@ function getFileNameFromPath(path) {
 }
 
 function getImageHtml(index) {
+    imageIndex = index;
     let path = "./assets/img/" + IMAGES[index];
     return `<img onclick='openImageDialog("${path}")' class='thumbmail' src=${path} alt=${IMAGES_ALT_TEXT[index]}/>`;
 }
