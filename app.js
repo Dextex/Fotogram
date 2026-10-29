@@ -14,18 +14,18 @@ const IMAGES = [
 ];
 
 const IMAGES_ALT_TEXT = [
-    "Ein Bild von einer Landschaft in Alaska",
-    "Ein Bild von einem Anime",
-    "Ein Bild von einer beeindruckenden Atmosphere",
-    "Ein Bild von einer Ente im Wasser",
-    "Bild von einen Hurrican aus dem Weltraum raus",
-    "Ein Bild von einem See mit Berg",
-    "Ein Bild von einen Schneeleopard",
-    "Ein Bild mit einen See",
-    "Ein Bild von einem Schnee Vogel",
-    "Ein Bild von Bergen",
-    "Ein Bild von einem Vogel",
-    "Ein Bild von einem zugeschneiten Baum",
+    "Landschaft in Alaska",
+    "Anime",
+    "beeindruckende Atmosphere",
+    "Eine Ente im Wasser",
+    "Ein Hurrican",
+    "Ein See mit Berg",
+    "Ein Schneeleopard",
+    "Ein See",
+    "Ein Schnee Vogel",
+    "Berge",
+    "Ein Vogel",
+    "Ein zugeschneiten Baum",
 ];
 let imageIndex = 0;
 let IMAGE_DIALOG_REF = document.getElementById("imageDialog");
@@ -81,7 +81,7 @@ function getFileNameFromPath(path) {
 
 function getImageHtml(index) {
     let path = "./assets/img/" + IMAGES[index];
-    return `<img onclick='openImageDialog("${path}")' class='thumbmail' src=${path} alt=${IMAGES_ALT_TEXT[index]}/>`;
+    return `<figure><img onclick='openImageDialog("${path}")' class='thumbmail' src=${path} alt=${IMAGES_ALT_TEXT[index]}/></figure>`;
 }
 
 function render() {
