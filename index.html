@@ -24,7 +24,11 @@
                 <div class="gallery" id="gallery"></div>
             </article>
 
-            <dialog id="imageDialog" onclick="closeDialog()">
+            <dialog
+                id="imageDialog"
+                onclick="closeDialog()"
+                aria-labelledby="imageTitle"
+            >
                 <article
                     class="dialog_article"
                     onclick="event.stopPropagation()"
@@ -34,6 +38,7 @@
                             onclick="closeDialog()"
                             type="button"
                             class="closeButton"
+                            aria-label="Close dialog"
                         >
                             <img src="./assets/icons/close.svg" alt="" />
                         </button>
