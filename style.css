@@ -114,6 +114,9 @@ dialog::backdrop {
 .dialog_header > div {
     width: 100%;
 }
+button {
+    cursor: pointer;
+}
 
 .closeButton {
     border: 0;

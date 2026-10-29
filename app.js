@@ -81,7 +81,7 @@ function getFileNameFromPath(path) {
 
 function getImageHtml(index) {
     let path = "./assets/img/" + IMAGES[index];
-    return `<button aria-haspopup="dialog" aria-controls="imageDialog" tabindex="0" class="thumbmail_button" onclick='openImageDialog("${path}")'><img class='thumbmail' src=${path} alt=${IMAGES_ALT_TEXT[index]}/> </button>`;
+    return `<button aria-haspopup="dialog" aria-controls="imageDialog" tabindex="0" class="thumbmail_button" onclick='openImageDialog("${path}")'><img class='thumbmail' src=${path} alt="${IMAGES_ALT_TEXT[index]}"/> </button>`;
 }
 
 function render() {
