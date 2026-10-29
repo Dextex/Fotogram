@@ -27,7 +27,11 @@ body > footer {
     background-size: cover;
     height: 100px;
 }
-
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
 .footer_wrapper {
     height: 100%;
     display: flex;
@@ -52,9 +56,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 16px;
-    row-gap: 16px;
-    padding: 16px;
+    gap: 16px;
+    padding-bottom: 56px;
 }
 
 .thumbmail {
