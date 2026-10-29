@@ -108,7 +108,7 @@ dialog::backdrop {
     align-items: center;
     justify-content: center;
 }
-.big_image_wrapper > img {
+.big_image_wrapper > figure > img {
     width: 100%;
 }
 .dialog_footer {
