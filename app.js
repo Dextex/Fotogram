@@ -28,29 +28,29 @@ const IMAGES_ALT_TEXT = [
     "Ein zugeschneiten Baum",
 ];
 let imageIndex = 0;
-let IMAGE_DIALOG_REF = document.getElementById("imageDialog");
-let IMAGE_REF = document.getElementById("dialogBigImage");
-let DIALOG_H2_REF = document.getElementById("imageTitle");
-let CURRENT_Max_REF = document.getElementById("currentMaxImage");
+let imageDialogRef = document.getElementById("imageDialog");
+let imageRef = document.getElementById("dialogBigImage");
+let dialogH2Ref = document.getElementById("imageTitle");
+let currentMaxRef = document.getElementById("currentMaxImage");
 
 function openImageDialog(path) {
-    IMAGE_DIALOG_REF = document.getElementById("imageDialog");
-    IMAGE_REF = document.getElementById("dialogBigImage");
-    DIALOG_H2_REF = document.getElementById("imageTitle");
-    CURRENT_Max_REF = document.getElementById("currentMaxImage");
+    imageDialogRef = document.getElementById("imageDialog");
+    imageRef = document.getElementById("dialogBigImage");
+    dialogH2Ref = document.getElementById("imageTitle");
+    currentMaxRef = document.getElementById("currentMaxImage");
 
     imageIndex = IMAGES.indexOf(getFileNameFromPath(path));
 
     setImg(imageIndex);
-    IMAGE_DIALOG_REF.showModal();
+    imageDialogRef.showModal();
 }
 
 function setImg(index) {
     let path = "./assets/img/" + IMAGES[index];
     let title = getFileNameFromPath(path);
-    CURRENT_Max_REF.innerHTML = imageIndex + 1 + "/" + IMAGES.length;
-    DIALOG_H2_REF.innerHTML = title;
-    IMAGE_REF.src = path;
+    currentMaxRef.innerHTML = imageIndex + 1 + "/" + IMAGES.length;
+    dialogH2Ref.innerHTML = title;
+    imageRef.src = path;
 }
 
 function nextImg() {
