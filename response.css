@@ -24,6 +24,10 @@
     main > header {
         justify-content: flex-start;
         padding: 20px 140px;
+        padding: 0px max(120px, calc(50% - 720px));
+    }
+    article {
+        padding: 0px max(120px, calc(50% - 720px));
     }
     .dialog_article {
         padding: 56px 64px;
