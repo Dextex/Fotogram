@@ -88,7 +88,7 @@ dialog:not([open]) {
     display: none;
 }
 dialog::backdrop {
-    background-color: rgba(9, 33, 42, 0.9);
+    background-color: rgba(9, 33, 42, 0.6);
 }
 .dialog_header {
     display: flex;
