@@ -81,7 +81,7 @@ function getFileNameFromPath(path) {
 
 function getImageHtml(index) {
     let path = "./assets/img/" + IMAGES[index];
-    return `<figure><img onclick='openImageDialog("${path}")' class='thumbmail' src=${path} alt=${IMAGES_ALT_TEXT[index]}/></figure>`;
+    return `<button tabindex="0" class="thumbmail_button" onclick='openImageDialog("${path}")'><img class='thumbmail' src=${path} alt=${IMAGES_ALT_TEXT[index]}/> </button>`;
 }
 
 function render() {

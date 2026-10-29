@@ -116,8 +116,33 @@ dialog::backdrop {
     padding: 0;
     background: transparent;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    border: 0px;
+    padding: 4px;
+    background-color: rgba(9, 33, 42, 1);
+}
+.closeButton:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    border: 0px;
+    padding: 4px;
+    background-color: rgba(18, 70, 88, 1);
 }
 
+.closeButton:active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    border: 0px;
+    padding: 4px;
+    background-color: rgba(13, 50, 64, 1);
+}
 .big_image_wrapper {
     display: flex;
     align-items: center;
@@ -130,6 +155,7 @@ dialog::backdrop {
     display: flex;
     gap: 40px;
     align-items: center;
+    justify-content: center;
 }
 .dialog_arrow_button {
     display: flex;
@@ -150,4 +176,11 @@ dialog::backdrop {
 
 .dialog_arrow_button:hover {
     background-color: rgba(253, 91, 79, 0.2);
+}
+.thumbmail_button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 16px;
 }
