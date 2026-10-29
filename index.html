@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./scrollbar.css" />
         <link rel="stylesheet" href="./fonts.css" />
         <link rel="stylesheet" href="./response.css" />
+        <link rel="icon" type="image/png" href="./assets/icons/Logo.svg" />
         <title>Fotogram</title>
         <script src="./app.js"></script>
     </head>
@@ -23,38 +24,43 @@
                 <div class="gallery" id="gallery"></div>
             </article>
 
-            <dialog id="imageDialog">
-                <header class="dialog_header">
-                    <button
-                        onclick="closeDialog()"
-                        type="button"
-                        class="closeButton"
-                    >
-                        <img src="./assets/icons/close.svg" alt="" />
-                    </button>
-                    <div><h2 id="imageTitle">Titel vom Bild</h2></div>
-                </header>
-                <section class="big_image_wrapper">
-                    <figure>
-                        <img
-                            id="dialogBigImage"
-                            src=""
-                            alt="Img in full view"
-                        />
-                    </figure>
-                </section>
-                <footer class="dialog_footer">
-                    <button
-                        onclick="previousImg()"
-                        class="dialog_arrow_button rotate180"
-                    >
-                        <img src="./assets/icons/Arrow-Right.svg" alt="" />
-                    </button>
-                    <aside><p id="currentMaxImage">1/12</p></aside>
-                    <button onclick="nextImg()" class="dialog_arrow_button">
-                        <img src="./assets/icons/Arrow-Right.svg" alt="" />
-                    </button>
-                </footer>
+            <dialog id="imageDialog" onclick="closeDialog()">
+                <article
+                    class="dialog_article"
+                    onclick="event.stopPropagation()"
+                >
+                    <header class="dialog_header">
+                        <button
+                            onclick="closeDialog()"
+                            type="button"
+                            class="closeButton"
+                        >
+                            <img src="./assets/icons/close.svg" alt="" />
+                        </button>
+                        <div><h2 id="imageTitle">Titel vom Bild</h2></div>
+                    </header>
+                    <section class="big_image_wrapper">
+                        <figure>
+                            <img
+                                id="dialogBigImage"
+                                src=""
+                                alt="Img in full view"
+                            />
+                        </figure>
+                    </section>
+                    <footer class="dialog_footer">
+                        <button
+                            onclick="previousImg()"
+                            class="dialog_arrow_button rotate180"
+                        >
+                            <img src="./assets/icons/Arrow-Right.svg" alt="" />
+                        </button>
+                        <aside><p id="currentMaxImage">1/12</p></aside>
+                        <button onclick="nextImg()" class="dialog_arrow_button">
+                            <img src="./assets/icons/Arrow-Right.svg" alt="" />
+                        </button>
+                    </footer>
+                </article>
             </dialog>
         </main>
         <footer>

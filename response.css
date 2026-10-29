@@ -25,7 +25,7 @@
         justify-content: flex-start;
         padding: 20px 140px;
     }
-    dialog {
+    .dialog_article {
         padding: 56px 64px;
         gap: 48px;
     }

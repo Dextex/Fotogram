@@ -84,9 +84,13 @@ dialog {
     justify-content: center;
     gap: 48px;
     border: 0px;
+    padding: 0px;
+    background-color: rgba(9, 33, 42, 1);
+}
+
+.dialog_article {
     padding: 32px 16px;
     border-radius: 40px;
-    background-color: rgba(9, 33, 42, 1);
 }
 dialog:not([open]) {
     display: none;
