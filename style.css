@@ -120,8 +120,8 @@ dialog::backdrop {
 }
 .dialog_footer {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    gap: 40px;
+    align-items: center;
 }
 .dialog_arrow_button {
     display: flex;
