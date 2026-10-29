@@ -1,5 +1,11 @@
 @media screen and (min-width: 1441px) {
-    main {
+    article {
         padding: 0px max(120px, calc(50% - 720px));
+    }
+}
+
+@media screen and (min-width: 375px) {
+    h1 {
+        font-size: 48px;
     }
 }

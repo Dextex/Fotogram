@@ -7,12 +7,13 @@
 body {
     background-color: rgba(6, 23, 30, 1);
 }
-body > header {
+main > header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 72px;
     background-color: rgba(9, 33, 42, 1);
+    width: 100%;
 }
 
 body > header > img {
@@ -41,7 +42,10 @@ body > footer {
 }
 
 main {
-    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
 }
 
 .gallery {

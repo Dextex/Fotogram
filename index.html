@@ -5,18 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./style.css" />
         <link rel="stylesheet" href="./scrollbar.css" />
-        <link rel="stylesheet" href="./response.css" />
         <link rel="stylesheet" href="./fonts.css" />
+        <link rel="stylesheet" href="./response.css" />
         <title>Fotogram</title>
         <script src="./app.js"></script>
     </head>
     <body onload="render()">
-        <header>
-            <img src="./assets/img/Logo2.png" alt="Fotogram Logo mit Text" />
-        </header>
         <main>
-            <h1>Your personal photo album</h1>
-            <div class="gallery" id="gallery"></div>
+            <header>
+                <img
+                    src="./assets/img/Logo2.png"
+                    alt="Fotogram Logo mit Text"
+                />
+            </header>
+            <article>
+                <h1>Your personal photo album</h1>
+                <div class="gallery" id="gallery"></div>
+            </article>
+
             <dialog id="imageDialog">
                 <header class="dialog_header">
                     <button
