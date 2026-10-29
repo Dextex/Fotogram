@@ -5,7 +5,10 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: rgba(6, 23, 30, 1);
+    min-height: 100dvh;
 }
 main > header {
     display: flex;
@@ -16,20 +19,23 @@ main > header {
     width: 100%;
 }
 
-body > header > img {
+main > header > img {
     height: 32px;
 }
 
 body > footer {
-    background-image: url("./assets/img/Subtract.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
+    width: 100%;
+    background-color: rgba(9, 33, 42, 1);
+    border-top-left-radius: 60%;
+    border-top-right-radius: 60%;
     height: 100px;
 }
 article {
+    flex: 1;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 56px;
 }
 .footer_wrapper {
@@ -40,12 +46,9 @@ article {
     justify-content: center;
     gap: 16px;
 }
-.footer_wrapper > img {
-    height: 24px;
-    width: 100px;
-}
 
 main {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -57,6 +60,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
+    max-width: 1300px;
     padding-bottom: 56px;
 }
 
